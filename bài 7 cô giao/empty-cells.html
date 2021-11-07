@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Empty Cells</title>
+		<style type="text/css">
+			td {
+				/*chọn màu và cỡ cho đường viền */
+				border: 1px solid #0088dd;
+				/*tạo khoảng trống xung quanh nội dung */
+				padding: 15px;}
+			table.one {
+				/*Hiển thị không có đường viền trên các ô trống trong bảng*/
+				empty-cells: show;}
+			table.two {
+				/*Hiển thị không có đường viền trên các ô trống trong bảng*/
+				empty-cells: hide;}
+		</style>
+	</head>
+	<body>
+		<table class="one">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+			</tr>
+		</table>
+		<table class="two">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

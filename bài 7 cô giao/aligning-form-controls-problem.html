@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aligning Form Controls - Problem</title>
+		<style type="text/css">
+			body {
+				/*chọn phông chữ */
+				font-family: Arial, Verdana, sans-serif;}
+		</style>
+	</head>
+	<body>
+<!--	gửi dữ liệu lên server-->
+		<form action="example.php" method="post">
+			<div>
+<!--				label định nghĩa nhãn cho phần tử -->
+				<label for="name" class="title">Name:</label>
+<!--				biểu diễn một trường hợp input mà người dùng có thể nhập dữ liệu -->
+<!--				text nhập văn bản với các thông tin -->
+<!--				id định danh các thẻ -->
+				<input type="text" id="name" name="name" />
+			</div>
+			<div>
+<!--				label định nghĩa nhãn cho phần tử -->
+				<label for="email" class="title">Email:</label>
+				<input type="email" id="email" name="email" />
+			</div>
+			<div class="radio-buttons">
+<!--				span nhóm các phần tử nội tuyến thành một nhóm-->
+				<span class="title">Gender:</span>
+<!--				radio cho phép người dùng chỉ chọn một trong số các lựa chọn-->
+<!--				valuechỉ định một giá trị cho phần tử -->
+				<input type="radio" name="gender" id="male" value="M" />
+				<label for="male">M</label>
+				<input type="radio" name="gender" id="female" value="F" />
+				<label for="female">F</label><br />
+			</div>
+			<div class="submit">
+
+				<input type="submit" value="Register" id="submit" />
+			</div>
+		</form>
+	</body>
+</html>

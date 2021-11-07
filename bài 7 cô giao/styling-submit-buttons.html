@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Styling Submit Buttons</title>
+		<style type="text/css">
+			input {
+				/*kích cỡ của chữ */
+				font-size: 120%;
+				/*màu cho chữ */
+				color: #5a5854;
+				/*chọn màu cho background */
+				background-color: #f2f2f2;
+				/*chọn màu và cỡ cho dường viền */
+				border: 1px solid #bdbdbd;
+				/*uốn cong các góc của đường viền */
+				border-radius: 5px;
+				/*tạo không gian xung quanh văn bản */
+				padding: 5px 10px 5px 10px;
+				/*sử dụng giá trị này làm hình nền được lặp theo cả hai trục dọc và ngang*/
+				background-repeat: no-repeat;
+				/*thiết lập vị trí của hình nền */
+				background-position: 8px 9px;
+				/*tác dụng xác định thành phần hiển thị theo các hàng độc lập*/
+				display: block;
+				/*canh lề cho văn bản ở đáy */
+				margin-bottom: 10px;
+			}
+			input#submit {
+				/*chọn màu */
+				color: #444444;
+				/*để tạo bóng cho thành phần */
+				text-shadow: 0px 1px 1px #ffffff;
+				/*chọn cỡ và đường viền cho đáy của đường viền */
+				border-bottom: 2px solid #b2b2b2;
+				/*chọn màu cho background */
+				background-color: #b9e4e3;
+				background: -webkit-gradient(linear, left top, left bottom, from(#beeae9), to(#a8cfce));
+				background: -moz-linear-gradient(top, #beeae9, #a8cfce);
+				background: -o-linear-gradient(top, #beeae9, #a8cfce);
+				background: -ms-linear-gradient(top, #beeae9, #a8cfce);
+			}
+			input#submit:hover {
+				/*chọn màu */
+				color: #333333;
+				/*chọn cỡ và màu cho đường viền */
+				border: 1px solid #a4a4a4;
+				/*chọn cỡ và màu cho đường viền trên cùng */
+				border-top: 2px solid #b2b2b2;
+				/*chọn màu cho background */
+				background-color: #a0dbc4;
+				background: -webkit-gradient(linear, left top, left bottom, from(#a8cfce), to(#beeae9));
+				background: -moz-linear-gradient(top, #a8cfce, #beeae9);
+				background: -o-linear-gradient(top, #a8cfce, #beeae9);
+				background: -ms-linear-gradient(top, #a8cfce, #beeae9);
+			}
+		</style>
+	</head>
+	<body>
+<!--	gửi dữ liệu cho server -->
+		<form>
+<!--			biểu diễn một trường hợp input mà người dùng có thể lập dữ liệu -->
+<!--			submit Dùng để gửi dữ liệu lên server, dữ liệu được gửi thông qua thuộc tính action-->
+<!--			value chỉ định một giá trị cho thành phần -->
+<!--			id định dạng các thẻ -->
+			<input type="submit" value="Register" id="submit" />
+		</form>
+	</body>
+</html>

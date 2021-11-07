@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Styling Text Inputs</title>
+		<style type="text/css">
+			input {
+				/*kích cỡ của chữ */
+				font-size: 120%;
+				/*màu của chữ */
+				color: #5a5854;
+				/*chọn màu của background */
+				background-color: #f2f2f2;
+				/*chọn cỡ và màu của đường viền */
+				border: 1px solid #bdbdbd;
+				/*uốn cong các góc */
+				border-radius: 5px;
+				/*tạo không gian xung quanh văn bản */
+				padding: 5px 5px 5px 30px;
+				/*sử dụng giá trị này làm hình nền được lặp theo cả hai trục dọc và ngang*/
+				background-repeat: no-repeat;
+				/*thiết lập vị trí của hình nền */
+				background-position: 8px 9px;
+				/*tác dụng xác định thành phần hiển thị theo các hàng độc lập*/
+				display: block;
+				/*canh lề cho văn bản ở đáy */
+				margin-bottom: 10px;
+			}
+			input:focus, input:hover {
+				/*chọn màu cho background */
+				background-color: #ffffff;
+				/*chọn cỡ và màu cho đường viền */
+				border: 1px solid #b1e1e4;
+			}
+			input#email {
+				/*dẫn đến hình ảnh */
+				background-image: url("images/email.png");
+			}
+			input#twitter {
+				/*dẫn đến hình ảnh */
+				background-image: url("images/twitter.png");
+			}
+			input#web {
+				/*dẫn đến hình ảnh */
+				background-image: url("images/web.png");
+			}
+		</style>
+	</head>
+	<body>
+<!--	gửi dữ liệu lên cho server -->
+		<form>
+<!--			biểu diễn một trường hợp input mà người dùng có thể nhập dữ liệu -->
+<!--				text nhập văn bản với các thông tin -->
+<!--			id định dạng các thẻ -->
+			<input type="text" id="email" />
+			<input type="text" id="twitter" />
+			<input type="text" id="web" />
+		</form>
+	</body>
+</html>

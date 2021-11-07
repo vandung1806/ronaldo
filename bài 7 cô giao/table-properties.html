@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Table Properties</title>
+		<style type="text/css">
+			body {
+				/*chọn phông chữ */
+				font-family: Arial, Verdana, sans-serif;
+				/*chọn màu chữ */
+				color: #111111;
+			}
+			table {
+				/*chiều rộng */
+				width: 600px;
+			}
+			th, td {
+				/*tạo không gian xung quanh nội dung */
+				padding: 7px 10px 10px 10px;
+			}
+			th {
+				/*thiết lập các kí tự viết hoa cho văn bản */
+				text-transform: uppercase;
+				/*tăng hoặc giảm khoản cách giữa các kí tự trong văn bản */
+				letter-spacing: 0.12em;
+				/*kích cỡ của chữ*/
+				font-size: 90%;
+				/*xác định cỡ và màu của đường viền dưới */
+				border-bottom: 2px solid #111111;
+				/*xác định cỡ và màu của đường viền trên*/
+				border-top: 1px solid #999;
+				/*căn chỉnh văn bản */
+				text-align: left;
+			}
+			tr.even {
+				/*chỉnh màu của background */
+				background-color: #efefef;
+			}
+			tr:hover {
+				/*chình màu của background*/
+				background-color: #c3e6e5;
+			}
+			.money {
+				/*căn chỉnh văn bản */
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>First Edition Auctions</h1>
+		<table>
+			<tr>
+				<th>Author</th>
+				<th>Title</th>
+				<th class="money">Reserve Price</th>
+				<th class="money">Current Bid</th>
+			</tr>
+			<tr>
+				<td>E.E. Cummings</td>
+				<td>Tulips & Chimneys</td>
+				<td class="money">$2,000.00</td>
+				<td class="money">$2,642.50</td>
+			</tr>
+			<tr class="even">
+				<td>Charles d'Orleans</td>
+				<td>Poemes</td>
+				<td class="money"></td>
+				<td class="money">$5,866.00</td>
+			</tr>
+			<tr>
+				<td>T.S. Eliot</td>
+				<td>Poems 1909 - 1925</td>
+				<td class="money">$1,250.00</td>
+				<td class="money">$8,499.35</td>
+			</tr>
+			<tr class="even">
+				<td>Sylvia Plath</td>
+				<td>The Colossus</td>
+				<td class="money"></td>
+				<td class="money">$1031.72</td>
+			</tr>
+		</table>
+	</body>
+</html>

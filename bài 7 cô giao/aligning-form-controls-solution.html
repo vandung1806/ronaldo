@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aligning Form Controls - Solution</title>
+		<style type="text/css">
+			body {
+				/*chọn phông chữ */
+				font-family: Arial, Verdana, sans-serif;
+			}
+			div {
+				/*chọn màu và cỡ cho đường viền đáy */
+				border-bottom: 1px solid #efefef;
+				/*canh lề cho văn bản */
+				margin: 10px;
+				/*tạo khoảng trống dưới nội dung */
+				padding-bottom: 10px;
+				/*chiều rộng */
+				width: 260px;
+			}
+			.title {
+				/*chỉ định hướng của phần tử */
+				float: left;
+				/*chiều rộng */
+				width: 100px;
+				/*căn chỉnh văn bản */
+				text-align: right;
+				/*tạo khoản không bên phải của nội dung */
+				padding-right: 10px;
+			}
+			.radio-buttons label {
+				/*chỉ định hướng của phần tử*/
+				float: none;
+			}
+			.submit {
+				/*căn chỉnh văn bản */
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="example.php" method="post">
+			<div>
+				<label for="name" class="title">Name:</label>
+				<input type="text" id="name" name="name" />
+			</div>
+			<div>
+				<label for="email" class="title">Email:</label>
+				<input type="email" id="email" name="email" />
+			</div>
+			<div class="radio-buttons">
+				<span class="title">Gender:</span>
+				<input type="radio" name="gender" id="male" value="M" />
+				<label for="male">M</label>
+				<input type="radio" name="gender" id="female" value="F" />
+				<label for="female">F</label><br />
+			</div>
+			<div class="submit">
+				<input type="submit" value="Register" id="submit" />
+			</div>
+		</form>
+	</body>
+</html>

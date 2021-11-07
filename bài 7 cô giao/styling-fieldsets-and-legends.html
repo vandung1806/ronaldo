@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Styling Fieldsets and Legends</title>
+		<style type="text/css">
+			* {
+				/*chọn phông chữ */
+				font-family: Arial, Verdana, sans-serif;
+				/*chọn màu cho chữ */
+				color: #665544;
+			 }
+			input {
+				/*chọn cỡ và màu cho đường viền đáy */
+				border-bottom: 1px dotted #dcdcdc;
+				/*đường viền trên cùng */
+				border-top: none;
+				/*đường viền bên phải */
+				border-right: none;
+				/*đường viền trái */
+				border-left: none;
+				/*tạo không gian xung quang văn bản */
+				padding: 5px;
+				/*chiều rộng co thành phần */
+				width: 280px;
+				/*canh lề cho văn bản ở đáy */
+				margin-bottom: 20px;
+			}
+			input:focus {
+				/*chọn màu và cỡ cho đường viền */
+				border: 1px dotted #dcdcdc;
+				/*một đường kẻ xung quanh phần tử, nằm bên ngoài border để làm nổi bật phần tử*/
+				outline: none;
+			}
+			input#submit {
+				/*chọn màu */
+				color: #ffffff;
+				/*chọn màu cho background */
+				background-color: #665544;
+				/*đường viền */
+				border: none;
+				/*uốn cong các góc của đường viền */
+				border-radius: 5px;
+				/*chiều rộng */
+				width: 80px;
+				/*thiết lập kí tự viết hoa cho văn bản */
+				text-transform: uppercase;
+			}
+			input#submit:hover {
+				/*chọn màu */
+				color: #665544;
+				/*chọn màu cho background */
+				background-color: #efefef;
+			}
+			fieldset {
+				/*chiều rộng */
+				width: 350px;
+				/*chọn màu và cỡ cho đường viền */
+				border: 1px solid #dcdcdc;
+				/*uốn cong các góc của đường viền */
+				border-radius: 10px;
+				/*tạo không gian xung quanh nội dung của văn bản */
+				padding: 20px;
+				/*căn chỉnh văn bản */
+				text-align: right;
+			}
+			legend {
+				/*chọn màu cho background*/
+				background-color: #efefef;
+				/*chọn cỡ và màu cho đường viền */
+				border: 1px solid #dcdcdc;
+				/*uốn cong các góc của đường viền */
+				border-radius: 10px;
+				/*tạo không gian xung quanh nội dung văn bản*/
+				padding: 10px 20px;
+				/*căn chỉnh văn bản */
+				text-align: left;
+				/*thiết lập kí tự viết hoa cho văn bản */
+				text-transform: uppercase;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+<!--			flieldset tác dụng nhóm các thành phần liên quan đến nhau trong form-->
+			<fieldset>
+<!--				legend định nghĩa một chú thích cho các phần tử-->
+				<legend>Newsletter</legend>
+<!--				label định nghĩa nhãn của phần tử-->
+				<label for="name">Name: </label>
+<!--				biểu diễn một trường hợp input mà người dùng có thể nhập dữu liệu -->
+<!--				text nhập văn bản với các thông tin -->
+				<input type="text" id="name" />
+
+				<label for="email">Email: </label>
+				<input type="text" id="email" />
+<!--				submit Dùng để gửi dữ liệu lên server, dữ liệu được gửi thông qua thuộc tính action-->
+<!--				value chỉ định một giá trị cho thành phần -->
+				<input type="submit" value="Subscribe" id="submit" />
+			</fieldset>
+		</form>
+	</body>
+</html>

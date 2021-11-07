@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lists, Tables and Forms</title>
+  <style type="text/css">
+    body {
+      /*chọn phông chữ */
+      font-family: Arial, Verdana, sans-serif;
+      /*kích cỡ của chữ */
+      font-size: 90%;
+      /*màu chữ */
+      color: #666;
+      /*chọn màu cho background */
+      background-color: #f8f8f8;
+    }
+
+    li {
+      /*Chỉ định một hình ảnh làm điểm đánh dấu mục danh sách trong danh sách*/
+      list-style-image: url("images/icon-plus.png");
+      /*khoảng cách gữa các dòng */
+      line-height: 1.6em;
+    }
+
+    table {
+      /*đặt khoản cách giữa đưuòng viền và dòng */
+      border-spacing: 0px;
+    }
+
+    th,
+    td {
+      /*tạo khoảng trống xung quanh nội dung*/
+      padding: 5px 30px 5px 10px;
+      /*đặt khoản cách giữa đường viền và dòng */
+      border-spacing: 0px;
+      /*kích cỡ chữ */
+      font-size: 90%;
+      /*canh lề cho văn bản */
+      margin: 0px;
+    }
+
+    th,
+    td {
+      /*căn chỉnh văn bản */
+      text-align: left;
+      /*chọn màu background */
+      background-color: #e0e9f0;
+      /*chọn màu và cỡ cho đường viền trên cùng */
+      border-top: 1px solid #f1f8fe;
+      /*chọn màu và cỡ cho đường viền đáy*/
+      border-bottom: 1px solid #cbd2d8;
+      /*chọn màu và cỡ cho đường viền bên phải */
+      border-right: 1px solid #cbd2d8;
+    }
+
+    tr.head th {
+      /*chọn màu*/
+      color: #fefefe;
+      /*chọn màu cho background*/
+      background-color: #90b4d6;
+      /*chọn màu và cỡ cho đường viền đáy */
+      border-bottom: 2px solid #547ca0;
+      /*chọn màu và cỡ cho đường viền bên phải */
+      border-right: 1px solid #749abe;
+      /*chọn màu và cỡ cho đường viền trên cùng */
+      border-top: 1px solid #90b4d6;
+      /*căn chỉnh văn bản */
+      text-align: center;
+      /*tạo bóng cho văn bản */
+      text-shadow: -1px -1px 1px #666666;
+      /*đặt khoảng cách giữa cách phần tử */
+      letter-spacing: 0.15em;
+    }
+
+    td {
+      /*tạo bóng cho văn bản */
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+
+    tr.even td,
+    tr.even th {
+      /*chọn màu cho background */
+      background-color: #e8eff5;
+    }
+
+    tr.head th:first-child {
+      -webkit-border-top-left-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    tr.head th:last-child {
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    fieldset {
+      /*chiều rộng */
+      width: 310px;
+      /*canh lề cho văn bản ở trên */
+      margin-top: 20px;
+      /*chọn màu và cỡ của đường viền */
+      border: 1px solid #d6d6d6;
+      /*chọn màu cưa background */
+      background-color: #ffffff;
+      /*chiều cao cửa dòng */
+      line-height: 1.6em;
+    }
+
+    legend {
+      /*kiểu chữa */
+      font-style: italic;
+      /*chịn màu */
+      color: #666666;
+    }
+
+    input[type="text"] {
+      /*chiều rộng */
+      width: 120px;
+      /*chọn màu và cỡ cửa đường viền */
+      border: 1px solid #d6d6d6;
+      /*tạo khoản trống xung quanh nội dung */
+      padding: 2px;
+      /*đặt đường viền xung quanh phần tử */
+      outline: none;
+      /*canh lề cho văn bản */
+      margin: 5px;
+    }
+
+    input[type="text"]:focus,
+    input[type="text"]:hover {
+      /*chọn màu cho background */
+      background-color: #d0e2f0;
+      /*chọn màu và cỡ cho đường viền */
+      border: 1px solid #999999;
+    }
+
+    input[type="submit"] {
+      /*chọn màu và cỡ cho đường viền */
+      border: 1px solid #006633;
+      /*chọn màu cho background */
+      background-color: #009966;
+      /*chọn màu */
+      color: #ffffff;
+      /*uốn cong các góc của đường viền */
+      border-radius: 5px;
+      /*tạo khoản trống xung quanh nội dung */
+      padding: 5px;
+      /*canh lề cho văn bản ở trên cùng */
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      /*chọn màu và cỡ cho đường viền */
+      border: 1px solid #006633;
+      /*chọn màu cho background */
+      background-color: #00CC33;
+      /*chọn màu */
+      color: #ffffff;
+      /*tạo con chỏ chuột */
+      cursor: pointer;
+    }
+
+    .title {
+      /*hình ảnh trôi sang bên phải  */
+      float: left;
+      /*chiều rộng */
+      width: 160px;
+      /*được đẩy xuống bên dưới các phần tử nổi bên trái*/
+      clear: left;
+    }
+
+    .submit {
+      /*chiều rộng */
+      width: 310px;
+      /*cảnh chỉnh văn bản sang bên phải */
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Poetry Workshops</h1>
+  <p>We will be conducting a number of poetry workshops and symposiums throughout the year.</p>
+  <p>Please note that the following events are free to members:</p>
+  <ul>
+    <li>A Poetic Perspective</li>
+    <li>Walt Whitman at War</li>
+    <li>Found Poems and Outsider Poetry</li>
+  </ul>
+  <table>
+    <tr class="head">
+      <th></th>
+      <th>New York</th>
+      <th>Chicago</th>
+      <th>San Francisco</th>
+    </tr>
+    <tr>
+      <th>A Poetic Perspective</th>
+      <td>Sat, 4 Feb 2020<br />11am - 2pm</td>
+      <td>Sat, 3 Mar 2020<br />11am - 2pm</td>
+      <td>Sat, 17 Mar 2020<br />11am - 2pm</td>
+    </tr>
+    <tr class="even">
+      <th>Walt Whitman at War</th>
+      <td>Sat, 7 Apr 2020<br />11am - 1pm</td>
+      <td>Sat, 5 May 2020<br />11am - 1pm</td>
+      <td>Sat, 19 May 2020<br />11am - 1pm</td>
+    </tr>
+    <tr>
+      <th>Found Poems &amp; Outsider Poetry</th>
+      <td>Sat, 9 Jun 2020<br />11am - 2pm</td>
+      <td>Sat, 7 Jul 2020<br />11am - 2pm</td>
+      <td>Sat, 21 Jul 2020<br />11am - 2pm</td>
+    </tr>
+    <tr class="even">
+      <th>Natural Death: An Exploration</th>
+      <td>Sat, 4 Aug 2020<br />11am - 4pm</td>
+      <td>Sat, 8 Sep 2020<br />11am - 4pm</td>
+      <td>Sat, 15 Sep 2020<br />11am - 4pm</td>
+    </tr>
+  </table>
+<!--  gửi dữ liệu lên server -->
+  <form action="http://www.example.com/form.php" method="get">
+<!--    flieldset tác dụng nhóm các thành phần liên quan đến nhau trong form-->
+    <fieldset>
+<!--      legend định nghĩa một chú thích cho các phần tử-->
+      <legend>Register your interest</legend>
+      <p>
+<!--        định nghĩa nhãn của phần tử -->
+        <label class="title" for="name">Your name:</label>
+<!--        biểu diễn một trường hợp input mà người dùng có thể nhập dữ liệu -->
+<!--        text nhập văn bản với các thông tin -->
+<!--        name tên thành phần -->
+<!--        id định dạng các thẻ -->
+        <input type="text" name="name" id="name"><br />
+        <label class="title" for="email">Your email:</label>
+        <input type="text" name="email" id="email">
+      </p>
+
+      <p>
+<!--        label định nghĩa nhãn của phần tử -->
+        <label for="location" class="title">Your closest center:</label>
+<!--        select sử dụng để tạo danh sách tùy chọn thả xuống-->
+        <select name="location" id="location">
+<!--          option định nghĩa một tùy chọn trong danh sách chọn lựa-->
+<!--          value chỉ định một giá trị cho phần tử -->
+          <option value="ny">New York</option>
+          <option value="il">Chicago</option>
+          <option value="ca">San Francisco</option>
+        </select>
+      </p>
+
+      <p>
+<!--        span nhóm các phần tử nội tuyến thành một nhóm-->
+      <span class="title">Are you a member?</span>
+<!--        radio cho phép người dùng chỉ chọn một trong số các lựa chọn-->
+      <label><input type="radio" name="member" value="yes" /> Yes</label>
+      <label><input type="radio" name="member" value="no" /> No</label>
+      </p>
+    </fieldset>
+    <div class="submit">
+<!--        submit Dùng để gửi dữ liệu lên server, dữ liệu được gửi thông qua thuộc tính action-->
+      <input type="submit" value="Register" />
+    </div>
+  </form>
+</body>
+
+</html>
